@@ -1,0 +1,20 @@
+{
+  "description": "My theme",
+  "homepage": "https://github.com/olsonpm/hyper-theme",
+  "license": "MIT",
+  "name": "hyper-theme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olsonpm/hyper-theme.git"
+  },
+  "version": "0.1.0",
+  "devDependencies": {
+    "prettier": "^1.10.2"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "semi": false
+  }
+}
