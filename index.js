@@ -20,7 +20,7 @@ const myCss = fs.readFileSync(path.join(__dirname, 'index.css'), 'utf8'),
 // Main //
 //------//
 
-exports.decorateConfig = config =>
+const decorateConfig = config =>
   Object.assign({}, config, {
     backgroundColor: colors.black,
     fontFamily: `Hack, ${config.fontFamily}`,
@@ -34,6 +34,12 @@ exports.decorateConfig = config =>
     }),
     css: `${config.css}\n\n${myCss}\n`,
     shellArgs: [],
+  })
+
+const decorateKeymaps = keymaps =>
+  Object.assign({}, keymaps, {
+    'ctrl-dir-scroll:scroll-line-up': 'ctrl+alt+shift+up',
+    'ctrl-dir-scroll:scroll-line-down': 'ctrl+alt+shift+down',
   })
 
 //
@@ -67,4 +73,14 @@ function getColors() {
     magenta: '#ff6ac1',
     cyan: '#45ffff',
   }
+}
+
+//
+//---------//
+// Exports //
+//---------//
+
+module.exports = {
+  decorateConfig,
+  decorateKeymaps,
 }
