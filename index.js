@@ -40,6 +40,12 @@ const decorateKeymaps = keymaps =>
   Object.assign({}, keymaps, {
     'ctrl-dir-scroll:scroll-line-up': 'ctrl+alt+shift+up',
     'ctrl-dir-scroll:scroll-line-down': 'ctrl+alt+shift+down',
+    'editor:movePreviousWord': 'ctrl+left',
+    'editor:moveNextWord': 'ctrl+right',
+    'editor:moveBeginningLine': 'home',
+    'editor:moveEndLine': 'end',
+    'editor:deletePreviousWord': 'ctrl+backspace',
+    'editor:deleteNextWord': 'ctrl+delete',
   })
 
 //
@@ -68,7 +74,7 @@ function getColors() {
     black: '#131313',
     red: '#ff5c57',
     green: '#28ff6f',
-    yellow: '#ad9039',
+    yellow: '#ffda69',
     blue: '#49adff',
     magenta: '#ff6ac1',
     cyan: '#45ffff',
