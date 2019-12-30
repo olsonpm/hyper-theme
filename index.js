@@ -20,7 +20,7 @@ const myCss = fs.readFileSync(path.join(__dirname, 'index.css'), 'utf8'),
 // Main //
 //------//
 
-const decorateConfig = config =>
+const decorateConfig = config =>  
   Object.assign({}, config, {
     backgroundColor: colors.black,
     fontFamily: `Hack, ${config.fontFamily}`,
