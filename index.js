@@ -24,7 +24,7 @@ const decorateConfig = config =>
   Object.assign({}, config, {
     backgroundColor: colors.black,
     fontFamily: `Hack, ${config.fontFamily}`,
-    fontSize: 18,
+    fontSize: 14,
     foregroundColor: colors.white,
     borderColor: '#222430',
     cursorColor: '#97979b',
@@ -38,8 +38,9 @@ const decorateConfig = config =>
 
 const decorateKeymaps = keymaps =>
   Object.assign({}, keymaps, {
-    'ctrl-dir-scroll:scroll-line-up': 'ctrl+alt+shift+up',
-    'ctrl-dir-scroll:scroll-line-down': 'ctrl+alt+shift+down',
+    // can re-enable when 'mousetrap' keybindings are fixed
+    // 'ctrl-dir-scroll:scroll-line-up': 'ctrl+alt+shift+up',
+    // 'ctrl-dir-scroll:scroll-line-down': 'ctrl+alt+shift+down',
     'editor:movePreviousWord': 'ctrl+left',
     'editor:moveNextWord': 'ctrl+right',
     'editor:moveBeginningLine': 'home',
