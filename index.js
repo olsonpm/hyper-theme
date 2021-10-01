@@ -20,7 +20,7 @@ const myCss = fs.readFileSync(path.join(__dirname, 'index.css'), 'utf8'),
 // Main //
 //------//
 
-const decorateConfig = config =>  
+const decorateConfig = config =>
   Object.assign({}, config, {
     backgroundColor: colors.black,
     fontFamily: `Hack, ${config.fontFamily}`,
@@ -38,9 +38,8 @@ const decorateConfig = config =>
 
 const decorateKeymaps = keymaps =>
   Object.assign({}, keymaps, {
-    // can re-enable when 'mousetrap' keybindings are fixed
-    // 'ctrl-dir-scroll:scroll-line-up': 'ctrl+alt+shift+up',
-    // 'ctrl-dir-scroll:scroll-line-down': 'ctrl+alt+shift+down',
+    'ctrl-dir-scroll:scroll-line-up': 'ctrl+shift+alt+up',
+    'ctrl-dir-scroll:scroll-line-down': 'ctrl+shift+alt+down',
     'editor:movePreviousWord': 'ctrl+left',
     'editor:moveNextWord': 'ctrl+right',
     'editor:moveBeginningLine': 'home',
